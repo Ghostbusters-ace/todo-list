@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "electron-build": "ng build && tsc electron/main.ts --outDir dist -t es5 && electron ./dist/main.js",
+    "electron-build-prod": "ng build && tsc electron/main.ts --outDir dist -t es5 && electron ./dist/main.js"
   },
   "private": true,
   "dependencies": {
