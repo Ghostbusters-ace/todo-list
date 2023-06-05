@@ -3,8 +3,13 @@ import * as path from 'path';
 import * as url from 'url';
 
 /**
- *
+ * electron/main.ts
+ *  Entry point of an Electron application
+ * @author DaCoDeMaNiaK <jean-luc.aubert@aelion.fr>
+ * @version 1.0.0
+ * @see https://www.electronjs.org/
  */
+
 let mainWindow: Electron.BrowserWindow | null;
 
 /**

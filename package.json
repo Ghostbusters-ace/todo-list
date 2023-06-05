@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "electron-build": "ng build && tsc electron/main.ts --outDir dist -t es5 && electron ./dist/main.js",
-    "electron-build-prod": "ng build && tsc electron/main.ts --outDir dist -t es5 && electron ./dist/main.js"
+    "electron-build-prod": "ng build --prod && tsc electron/main.ts --outDir dist -t es5 && electron ./dist/main.js",
+    "json-server": "json-server --watch data/db.json"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "ngx-indexed-db": "^11.0.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -32,6 +34,7 @@
     "@types/node": "^12.11.1",
     "electron": "^24.3.0",
     "jasmine-core": "~4.0.0",
+    "json-server": "^0.17.3",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
